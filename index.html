@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main">
+    <section class="upper-section">
+      <div class="container">
+        <div class="quote-block">
+          <p class="quote-text">
+            “Не старайтесь стать успешным человеком, а пытайтесь стать ценным человеком.”
+          </p>
+          <button class="quote-btn"></button>
+        </div>
+        <div class="time-wrapper">
+          <div class="clock-block">
+            <p class="greeting">Good Morning, it's Currently</p>
+            <p class="time"></p>
+          </div>
+          <button class="clock-btn clock-btn--less">More</button>
+        </div>
+      </div>
+    </section>
+    <section class="bottom-section">
+      <div class="container">
+        <div class="btm-wrapper">
+          <div class="btm__left">
+            <div class="btm__content-block">
+              <p class="small-text">Current Timezone</p>
+              <p class="large-text large-text--tz"></p>
+            </div>
+            <div class="btm__content-block">
+              <p class="small-text">Day of the year</p>
+              <p class="large-text large-text--day-year"></p>
+            </div>
+          </div>
+          <div class="btm__right">
+            <div class="btm__content-block">
+              <p class="small-text">Day of the week</p>
+              <p class="large-text large-text--day-week"></p>
+            </div>
+            <div class="btm__content-block">
+              <p class="small-text">Week Number</p>
+              <p class="large-text large-text--week-number"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="libs/luxon.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
