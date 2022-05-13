@@ -5,16 +5,16 @@
 
     let quotes = 
         [ 
-            '"Помните: вы притягиваете к себе то, во что вы верите."',
-            '"Когда вам покажется, что цель недостижима – не изменяйте цель – измените свой план действий."',
-            '"Путешествуйте не для того, чтобы сбежать от жизни, а для того, чтобы жизнь не сбежала от нас."',
-            '"Если это важно для тебя, ты найдешь время, возможность и способ. Если нет – оправдание."',
-            '"Ваши близкие люди, ваша семья будут счастливы лишь тогда, когда будете счастливы вы!"',
-            '"Неудача – это просто возможность начать снова, но уже более мудро."',
-            '"Если ты хочешь быть лучше остальных, то приготовься делать то, что остальные не хотят делать."',
-            '"Всё когда-нибудь заканчивается. Важно то, что начинается после."',
-            '"Будь несчастным. Или мотивируй себя. Что бы ни было сделано, это всегда твой выбор."',
-            '"Не старайтесь стать успешным человеком, а пытайтесь стать ценным человеком."'
+            'Помните: вы притягиваете к себе то, во что вы верите',
+            'Когда вам покажется, что цель недостижима – не изменяйте цель – измените свой план действий',
+            'Путешествуйте не для того, чтобы сбежать от жизни, а для того, чтобы жизнь не сбежала от нас',
+            'Если это важно для тебя, ты найдешь время, возможность и способ. Если нет – оправдание',
+            'Ваши близкие люди, ваша семья будут счастливы лишь тогда, когда будете счастливы вы!',
+            'Неудача – это просто возможность начать снова, но уже более мудро',
+            'Если ты хочешь быть лучше остальных, то приготовься делать то, что остальные не хотят делать',
+            'Всё когда-нибудь заканчивается. Важно то, что начинается после',
+            'Будь несчастным. Или мотивируй себя. Что бы ни было сделано, это всегда твой выбор',
+            'Не старайтесь стать успешным человеком, а пытайтесь стать ценным человеком'
         ];
 
     quoteBtn.addEventListener('click', function(){
@@ -54,35 +54,39 @@
 
         let timeForChange = time();
 
-        // Проверка работы - Раскомментировать и менять число
-        // let timeForChange = 22;
-
-        if ((6 <= timeForChange) && (timeForChange <= 10)) {
-            greetingTime.innerHTML = 'Good Morning, its Currently';
+        function morning() {
             greetingTime.classList.add("greeting--day");
             timeBackground.classList.add("main--day");
             btmColor.classList.add('bottom-section--day');
             borderLineColor.classList.add('btm__left--day')
+        }
+
+        function evening() {
+            greetingTime.classList.add("greeting--evening");
+            timeBackground.classList.add("main--night");
+        }
+
+        // Проверка работы - Раскомментировать и менять число
+        // let timeForChange = 7;
+
+        if ((6 <= timeForChange) && (timeForChange <= 10)) {
+            greetingTime.innerHTML = 'Good Morning, its Currently';
+            morning();
         }
 
         else if ((10 < timeForChange) && (timeForChange <= 16)) {
             greetingTime.innerHTML = 'Good Day, its Currently';
-            greetingTime.classList.add("greeting--day");
-            timeBackground.classList.add("main--day");
-            btmColor.classList.add('bottom-section--day');
-            borderLineColor.classList.add('btm__left--day')
+            morning();
         }
 
         else if ((16 < timeForChange) && (timeForChange < 22)) {
             greetingTime.innerHTML = 'Good Evening, its Currently';
-            greetingTime.classList.add("greeting--evening");
-            timeBackground.classList.add("main--night");
+            evening(); 
         }
 
         else {
             greetingTime.innerHTML = 'Good Night, its Currently';
-            greetingTime.classList.add("greeting--evening");
-            timeBackground.classList.add("main--night");
+            evening();
         }
     }
 
@@ -128,8 +132,6 @@
     const wn = dayWeekYear.now().weekNumber;
     weekNumber.textContent = wn;
 
-    // const today = dayWeekYear.now().day; - день месяца
-    // const today = dayWeekYear.now().offsetNameLong;
 
 
 

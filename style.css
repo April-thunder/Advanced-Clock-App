@@ -324,6 +324,7 @@ body {
   .quote-block {
     padding-top: 32px;
     width:auto;
+    height: 100px;
   }
 
   .quote-text {
@@ -344,7 +345,7 @@ body {
   }
 
   .time-wrapper {
-    padding-top: 140px;
+    padding-top: 150px;
   }
 
   .clock-btn {
@@ -356,7 +357,7 @@ body {
     background-position-x: 80px;
     background-position-y: center;
     padding-right: 30px;
-    margin-top: 50px;
+    margin-top: 90px;
   }
 
   .clock-btn--less {
@@ -400,6 +401,24 @@ body {
 
   .btm__left {
     padding-right: 0;
+  }
+}
+
+@media (max-width: 325px) {
+  .clock-btn {
+    margin-top: 8px;
+  }
+
+  .btm-wrapper {
+    padding-top: 25px;
+  }
+
+  .time-wrapper {
+    padding-top: 90px;
+  }
+
+  .time-wrapper--short {
+    padding-top: 35px;
   }
 }
 
