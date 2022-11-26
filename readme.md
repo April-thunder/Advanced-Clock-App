@@ -6,7 +6,7 @@ Exercise to improve Javascript skills
 ## Technologies used
 
 - JS
-- HTML
+- HTML5
 - CSS (Flexbox Layout)
 - BEM Methodology
 
