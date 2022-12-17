@@ -8,7 +8,6 @@ Exercise to improve Javascript skills
 - JS
 - HTML5
 - CSS (Flexbox Layout)
-- BEM Methodology
 
 ## Notes
 
